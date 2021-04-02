@@ -1,0 +1,41 @@
+/* claass header */
+
+.header{
+    background-color:powderblue;
+    border-style: solid; 
+     
+}
+
+/* tag for ride for ride tag*/
+
+
+ride{
+    text-align: right;
+    color: brown;
+    position:relative; 
+    right:400px; 
+    top:2px; 
+}
+
+/* tag for frm for form tag */
+
+frm{
+    text-align: left;
+    color: brown;
+    position:relative; 
+    left:400px; 
+    top:2px; 
+}
+
+
+/* id for trip mangment */
+
+#trip_mangement{
+    color:blue;
+    background-color:silver;
+    float: left;
+    width: 300px;
+    border: 3px solid #73AD21;
+    padding: 10px;  
+    height: 700px;
+}
