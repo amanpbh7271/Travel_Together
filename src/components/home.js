@@ -1,5 +1,5 @@
 import React from 'react';
-import 'D:/pract/react/Travel_Together/my-app/src/Style/home.css';
+import '../Style/home.css';
 
 export default class home extends React.Component
 {
