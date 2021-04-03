@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-export default class Create_Trip extends React.Component{
+export default class CreateTrip extends React.Component{
 
      constructor()
      {
