@@ -1,5 +1,10 @@
 import React from 'react';
-import '../Style/home.css';
+import '../Style/Home.css';
+
+import 'bootstrap/dist/css/bootstrap.min.css'
+
+import {Button, Form} from 'react-bootstrap'
+
 
 export default class home extends React.Component
 {
@@ -30,22 +35,15 @@ export default class home extends React.Component
         return (
             <div>
                  <div class="header">
-                    <form >  
+                    <Form >  
                     <h1>
                       <ride>Ride & Share</ride>
-                                    
+                      <Button variant="primary">SIGN IN</Button>{' '} 
+                      
+                    &emsp;
                    
-                    &emsp;
-                    <frm>
-                    <input type="text" name="user"  size="6" onChange={(e)=>{this.setState({user:e.target.value})} }placeholder="Email-Id" required></input>
-                    &emsp;
-                    <input type="text" name="psd" size="6" onChange={(e)=>{this.setState({psd:e.target.value})}} placeholder="password" required></input>
-                    &emsp;
-                   <button font-size="20" onClick={()=>this.submit()}  >LOGIN</button>
-                   </frm>
-                    
               </h1>
-              </form>
+              </Form>
                  </div>
          
           <div id="trip_mangement">
