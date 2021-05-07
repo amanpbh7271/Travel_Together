@@ -9,6 +9,7 @@ import Register from './components/Register.js';
 //import DiscoverTrip from './components/Discover_Trip';
 import Login from './components/Login.js';
 import Welcome from './components/Welcome.js';
+import Logout from './components/Logout';
 
 import { Route, Switch } from 'react-router-dom'
 function App() {
@@ -19,8 +20,10 @@ function App() {
     
     <Switch>
         <Route exact path = "/" component = {Login} /> 
-        <Route path = "/register" component = {Register} />
+        <Route path = "/Register" component = {Register} />
         <Route path = "/welcome" component = {Welcome} />
+        <Route path = "/logout" component = {Logout} />
+        
         <Route component = {Error} />
       </Switch>      
     

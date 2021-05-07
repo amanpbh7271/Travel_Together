@@ -2,38 +2,57 @@ import React from 'react';
 import '../Style/Login.css';
 
 import {Button, Form, FormGroup} from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 //import welcome from './welcome.js'
 export default class Login extends React.Component{
 
-    constructor()
+    constructor(props)
     {
-        super()
+        super(props)
+        const token = localStorage.getItem("token")
+       
+        let isLoggedIn = true
+        if (token === null){
+            isLoggedIn = false
+        }
         this.state={
              
             user:null,
-            psd:null
+            psd:null,
+            isLoggedIn 
         }
-    }
 
+        //this.submit = this.submit.bind(this)
+        //this.onChange = this.onChange.bind(this)
+    }
    
-    submit= event=> {
+    submit = event=> {
       //  console.warn(this.state)
       
       //alert("submiision scuusfull")
      
-      if(this.state.user==null||this.state.psd==null)
-      alert(" please fill form")
-      else
-      alert(" your login sucessfully")
+      // if(this.state.user==null||this.state.psd==null)
+      // alert(" please fill form")
+      // else
+      // alert(" your login sucessfully")
       event.preventDefault()
-      this.props.history.push('./welcome')
+      const {user, psd} = this.state
+      if (user === "kedawat05@gmail.com" && psd === "12345"){
+        localStorage.setItem("token", "Nileshgupta ")
+        
+        this.setState({
+          isLoggedIn : true
+        })
+      }
     }
 
     
 
       render()
       {
+        if (this.state.isLoggedIn){
+          return <Redirect to = "/welcome" />
+        }
              return (
                  
                 <div >
@@ -72,7 +91,7 @@ export default class Login extends React.Component{
 
                    
                  
-
+ 
                 </div>
 
              )
